@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>垃圾分类查询@KIKI</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/carousel.css"/>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="">垃圾分类查询<!--Refuse Classification--></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="favorite">排名 <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login">登陆</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="regester">注册</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin">管理</a>
+        </li>
+        <!--
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+        -->
+      </ul>
+      <form class="form-inline mt-3 mt-md-0" action="/results" method="post">
+        <input class="form-control mr-sm-2" type="text" name="phrase" placeholder="请输入垃圾名称" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+      </form>
+    </div>
+  </nav>
+</header>
+
+<main role="main">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=4056039378,849793705&fm=85&app=92&f=JPEG?w=121&h=75&s=D4A29BF25F47365F5E778E0B030060C1">
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>垃圾分类重点城市有哪些</h1>
+            <p>近日，住房和城乡建设部印发《关于在全国地级及以上城市全面开展生活垃圾分类工作的通知》，部署全国地级及以上城市要全面开展生活垃圾分类的各项工作。</p>
+            <p><a class="btn btn-lg btn-primary" href="citys" role="button">查看</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>为什么要垃圾分类？</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <div class="carousel-caption text-right">
+            <h1>One more for good measure.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+<div class="container">
+
+
+  <div class="row row-cols-4">
+    <div class="col-md-3 ml-md-auto">
+      <p class="thumbnail_align"> <img src="static/images/re.png" alt="" class="thumbnail" height="200" width="200"/> </p>
+      <h4>可回收垃圾</h4>
+      <p>是指在日常生活中或者为日常生活提供服务的活动中产生的，已经失去原有全部或者部分使用价值，回收后经过再加工可以成为生产原料或者经过整理可以再利用的物品，包括废纸类、塑料类、玻璃类、金属类、织物类等。</p>
+    </div>
+    <div class="col-md-3 ml-md-auto">
+      <p class="thumbnail_align"> <img src="static/images/war.png" alt="" class="thumbnail"height="200" width="200"/> </p>
+      <h4>有害垃圾</h4>
+      <p>是指生活垃圾中对人体健康或者自然环境造成直接或者潜在危害的物质，包括废充电电池、废扣式电池、废灯管、弃置药品、废杀虫剂(容器)、废油漆(容器)、废日用化学品、废水银产品、废旧电器以及电子产品等。</p>
+    </div>
+    <div class="col-md-3 ml-md-auto">
+      <p class="thumbnail_align"> <img src="static/images/wet.png" alt="" class="thumbnail"height="200" width="200"/> </p>
+      <h4>厨余垃圾</h4>
+      <p>是指居民日常生活中产生的有机易腐垃圾，包括菜叶、剩菜、剩饭、果皮、蛋壳、茶渣、骨头等。</p>
+    </div>
+    <div class="col-md-3 ml-md-auto">
+      <p class="thumbnail_align"> <img src="static/images/non-re.png" alt="" class="thumbnail"height="200" width="200"/> </p>
+      <h4>不可回收垃圾</h4>
+      <p>是指除可回收物、有害垃圾和厨余垃圾之外的，混杂、污染、难分类的其他生活垃圾。</p>
+    </div>
+  </div>
+</div>
+
+  <!-- FOOTER -->
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <p class="float-right"><a href="">返回顶部</a></p>
+      <p>&copy; 2019-2020 KIKI, Inc. &middot; <a href="#">免责声明</a> &middot; <a href="#">我们的团队</a></p>
+    </div>
+  </footer>
+
+</main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</html>
