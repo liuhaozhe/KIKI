@@ -6,10 +6,6 @@ dbconfig = {'host':'127.0.0.1',
                 'passwd':'liuhaozhe0253',
                 'db':'KIKI', }
 
-data = [
-    ('liuhaozhe','aeiou','127.0.0.1','Firefox',"{'e','i'}"),
-]
-
 sql_search_code="""
                     select * from user_info
                 """
@@ -19,8 +15,6 @@ def indb(data):
         sql = 'insert into user_info(user, email) values(%s,%s);'
         # 拼接并执行sql语句
         cur.executemany(sql, data)
-
-#indb(data)
 
 def outdb(sqlcode):
     with UseDatebase(dbconfig) as cur:
