@@ -5,18 +5,11 @@ from urllib import request, parse, error;
 from urllib.parse import quote
 
 
-def sort(rubbish):
+def searchapi(rubbish):
     api_url = 'https://cspe.api.storeapi.net/api/71/181';
     appid = '2481';
     secret = '132af0367602a281170987cf620e78bc';
-    data = {
-        'appid': '1',
-        'format': 'json',
-        'rbh_name': rubbish,
-        'time': '1545829466',
-    };
-    data['appid'] = appid;
-    data['time'] = round(time.time());
+    data = {'appid': appid, 'format': 'json', 'rbh_name': rubbish, 'time': round(time.time())};
     keysArr = list(data.keys())
     keysArr.sort()
     md5String = '';
@@ -40,18 +33,28 @@ def sort(rubbish):
     opener = request.build_opener()
     r = opener.open(fullurl=req)
     doc = r.read();
-    #print(eval(doc.decode('utf-8')))
-    if ((eval(doc.decode('utf-8'))['codeid']) == 10000):
-        if ((eval(doc.decode('utf-8'))['retdata']['rbh_isbig']) == '大件垃圾'):
+    # print(eval(doc.decode('utf-8')))
+    if (eval(doc.decode('utf-8'))['codeid']) == 10000:
+        if (eval(doc.decode('utf-8'))['retdata']['rbh_isbig']) == '大件垃圾':
             print(eval(doc.decode('utf-8'))['retdata']['rbh_abstract'])
+            return eval(doc.decode('utf-8'))['retdata']['rbh_abstract']
         else:
             print(eval(doc.decode('utf-8'))['retdata']['rbh_type_name'])
-            print(eval(doc.decode('utf-8'))['retdata']['rbh_abstract']+eval(doc.decode('utf-8'))['retdata']['rbh_content'])
+            print(eval(doc.decode('utf-8'))['retdata']['rbh_abstract'] + eval(doc.decode('utf-8'))['retdata'][
+                'rbh_content'])
             print(eval(doc.decode('utf-8'))['retdata']['rbh_type_name'] + "包括：" + eval(doc.decode('utf-8'))['retdata'][
                 'rbh_example'])
-    elif ((eval(doc.decode('utf-8'))['codeid']) == 30012):
+            return '{}\n{}\n{}'.format(
+                eval(doc.decode('utf-8'))['retdata']['rbh_type_name'],
+                eval(doc.decode('utf-8'))['retdata']['rbh_abstract'] + eval(doc.decode('utf-8'))['retdata']['rbh_content'],
+                eval(doc.decode('utf-8'))['retdata']['rbh_type_name'] + "包括：" + eval(doc.decode('utf-8'))['retdata'][
+                'rbh_example']
+            )
+    elif (eval(doc.decode('utf-8'))['codeid']) == 30012:
         print("暂时无法查询到该垃圾的分类结果，有待我们完善")
+        return "暂时无法查询到该垃圾的分类结果，有待我们完善"
     else:
         print("出现错误，请联系管理员")
-        
-sort('前男友')
+        return"出现错误，请联系管理员"
+
+

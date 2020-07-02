@@ -3,7 +3,7 @@ from db_cn import UseDatebase
 
 dbconfig = {'host':'127.0.0.1',
                 'user':'root',
-                'passwd':'liuhaozhe0253',
+                'passwd':'QAZwsx123456',
                 'db':'KIKI', }
 
 sql_search_code="""
